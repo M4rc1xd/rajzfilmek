@@ -30,6 +30,15 @@ function App() {
       Rajzfilmek szama: {rajzfilmek.length}
       Legkorabbi rajzfilm: {legregebbiRajzfilm}
       Legkesobbi rajzfilm: {legkesobbiRajzfilm}
+
+      Rajzfilmek listaja:
+      <ul>
+        {rajzfilmek.map((rajzfilm) => (
+          <li key={rajzfilm.id}>
+            {rajzfilm.cim} - {rajzfilm.studio} - {rajzfilm.megjelenesEve} - {rajzfilm.premier.toString()}
+          </li>
+        ))}
+      </ul>
     </>
   )
 }
