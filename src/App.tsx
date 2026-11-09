@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import type Rajzfilm from './components/rajzfilmek'
+import "bootstrap/dist/css/bootstrap.min.css"
+import RajzfilmLista from './components/Rajzfilm';
 
 function App() {
 
@@ -27,18 +29,13 @@ function App() {
 
   return (
     <>
-      Rajzfilmek szama: {rajzfilmek.length}
-      Legkorabbi rajzfilm: {legregebbiRajzfilm}
-      Legkesobbi rajzfilm: {legkesobbiRajzfilm}
+      <p>Rajzfilmek szama: {rajzfilmek.length}</p>
+      <p>Legkorabbi rajzfilm: {legregebbiRajzfilm}</p>
+      <p>Legkesobbi rajzfilm: {legkesobbiRajzfilm}</p>
+      <p>{toString(rajzfilmek[0]?.premier)}</p>
 
-      Rajzfilmek listaja:
-      <ul>
-        {rajzfilmek.map((rajzfilm) => (
-          <li key={rajzfilm.id}>
-            {rajzfilm.cim} - {rajzfilm.studio} - {rajzfilm.megjelenesEve} - {rajzfilm.premier.toString()}
-          </li>
-        ))}
-      </ul>
+      <p>Rajzfilmek listaja:</p>
+      <RajzfilmLista rajzfilmek={rajzfilmek} />
     </>
   )
 }
