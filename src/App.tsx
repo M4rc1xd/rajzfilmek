@@ -14,8 +14,8 @@ function App() {
     adatBetoltese();
   }, []);
 
-  let legregebbiRajzfilm = rajzfilmek[0].megjelenesEve
-  let legkesobbiRajzfilm = rajzfilmek[0].megjelenesEve
+  let legregebbiRajzfilm = rajzfilmek[0]?.megjelenesEve
+  let legkesobbiRajzfilm = rajzfilmek[0]?.megjelenesEve
   for (const rajzfilm of rajzfilmek) {
     if (rajzfilm.megjelenesEve < legregebbiRajzfilm) {
       legregebbiRajzfilm = rajzfilm.megjelenesEve
