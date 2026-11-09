@@ -32,7 +32,6 @@ function App() {
       <p>Rajzfilmek szama: {rajzfilmek.length}</p>
       <p>Legkorabbi rajzfilm: {legregebbiRajzfilm}</p>
       <p>Legkesobbi rajzfilm: {legkesobbiRajzfilm}</p>
-      <p>{toString(rajzfilmek[0]?.premier)}</p>
 
       <p>Rajzfilmek listaja:</p>
       <RajzfilmLista rajzfilmek={rajzfilmek} />

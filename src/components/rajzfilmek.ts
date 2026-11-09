@@ -3,5 +3,5 @@ export default interface Rajzfilm {
     cim: string
     studio: string
     megjelenesEve: number
-    premier: Date
+    premier: string
 }
